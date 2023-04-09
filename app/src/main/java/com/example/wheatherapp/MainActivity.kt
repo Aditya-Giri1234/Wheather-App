@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         binding.wheather.text=
             response?.getJSONArray("weather")?.getJSONObject(0)?.getString("main")
 
-        if(binding.wheather.text.contentEquals("smoke",true))
+        if(binding.wheather.text.contentEquals("smoke",true)||binding.wheather.text.contentEquals("haze",true)||binding.wheather.text.contentEquals("cloud",true))
         {
             binding.image.setImageResource(R.drawable.sun_cloudy)
             binding.back.setBackgroundResource(R.color.smoke)
